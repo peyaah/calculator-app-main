@@ -1,0 +1,170 @@
+*{
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    place-content: center;
+    background-color: var(--backgroundBlue);
+}
+
+:root{
+   --backgroundBlue: hsl(222, 26%, 31%); /* MAIN BACKGROUND */
+   --toogleBackground: hsl(223, 31%, 20%);/*TOGGLE BACKGROUND */
+   --screenBackground: hsl(224, 36%, 15%); /* SCREEN BACKGROUND */
+   --fontButton: hsl(221, 14%, 31%); /*FONT BUTTON*/
+   --darkBlueKey: hsl(225, 21%, 49%); /* RESET BUTTON and DEL */
+   --darkBlueShadow: hsl(224, 28%, 35%);
+   --redKeyToggle: hsl(6, 63%, 50%);
+   --redShadowToggle: hsl(6, 70%, 34%);
+   --graykeyToggle: hsl(30, 25%, 89%);
+   --grayKeyShadow: hsl(28, 16%, 65%);
+   --white: hsl(0, 0%, 100%);
+}
+
+.calculator-app{
+    display: grid;
+    place-content: center;
+    width: 800px;
+    margin: 30px;
+}
+
+.counter-holder{
+    display: flex;
+    gap: 5px;
+    font-size: 10px;
+    color: var(--white);
+    justify-content: end;
+}
+
+/* SUB HEADER */
+.sub-header-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: end;
+    color: var(--white);
+    margin-top: 0px;
+}
+.sub-header-container label:nth-child(2) {
+    display: flex;
+    justify-content: end;
+    font-size: 10px;
+}
+/* OUT PUT CONTAINER */
+.output-container{
+    margin: 10px 0px;
+    display: grid;
+    height: 80px;
+    width: 400px;
+    background-color: var(--screenBackground);
+    border-radius: 10px;
+    place-content: center;
+}
+.result-box{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-color: var(--screenBackground);
+    border: none;
+    color: var(--white);
+    font-size: 50px;
+    height: 60px;
+    width: 390px;
+}
+.result-box:focus{
+    outline: none;
+}
+
+/* BUTTON CONTAINERS */
+.button-container{
+    display: grid;
+    background-color: var(--toogleBackground);
+    height: auto;
+    width: 400px;
+    border-radius: 10px;
+    
+}
+.numerical-button{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: auto;
+    
+    
+}
+.number-container{
+    display: grid;
+    margin: 15px;
+    height: 250px;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    width: 280px;
+
+}
+.number-container button{
+    background-color: var(--graykeyToggle);
+    border-radius: 10px;
+    border: none;
+    color: var(--fontButton);
+    font-size: 20px;
+    box-shadow: 0px 5px var(--grayKeyShadow);
+}
+
+.symbol-container{
+    display: grid;
+    margin-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    gap: 12px;
+    
+}
+.symbol-container button{
+    background-color: var(--graykeyToggle);
+    border-radius: 10px;
+    border: none;
+    color: var(--fontButton);
+    font-size: 20px;
+    box-shadow: 0px 5px var(--grayKeyShadow);
+}
+
+.reset-equal-container{
+    display: grid;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+.reset-equal-container button{
+    height: 55px;
+    border-radius: 10px;
+    border: none;
+    color: var(--fontButton);
+    font-size: 20px;
+}
+
+#del-button, #reset-button{
+    background-color: var(--darkBlueKey);
+    color:var(--white);
+    box-shadow: 0px 5px var(--darkBlueShadow);
+}
+#equal-button{
+    background-color: var(--redKeyToggle);
+    box-shadow: 0px 5px var(--redShadowToggle);
+    color: var(--white);
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(230, 43%, 3%); }
+
+
+.numerical-button button:active ,#del-button:active, 
+#reset-button:active, #equal-button:active{
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+}

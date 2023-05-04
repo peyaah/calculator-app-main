@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Frontend Mentor | Calculator app</title>
+  </head>
+  
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <body>
+    <div id="app">
+      <div class="calculator-app">
+        <div class="sub-header-container">
+          <label for="">Calc</label>
+        </div>
+        <div class="output-container">
+          <label class="result-box">{{output}}</label>
+        </div>
+        <div class="button-container">
+          <div class="numerical-button">
+            <div class="number-container">
+              <button @click="inputValue(7)">7</button>
+              <button @click="inputValue(8)">8</button>
+              <button @click="inputValue(9)">9</button>
+              <button @click="inputValue(4)">4</button>
+              <button @click="inputValue(5)">5</button>
+              <button @click="inputValue(6)">6</button>
+              <button @click="inputValue(1)">1</button>
+              <button @click="inputValue(2)">2</button>
+              <button @click="inputValue(3)">3</button>
+              <button @click="inputValue('.')">.</button>
+              <button @click="inputValue(0)">0</button>
+              <button @click="inputValue('/')">/</button>
+            </div>
+            <div class="symbol-container">
+              <button id="del-button">DEL</button>
+              <button @click="inputValue('+')">+</button>
+              <button @click="inputValue('-')">-</button>
+              <button @click="inputValue('x')">x</button>             
+            </div>
+          </div>
+          <div class="reset-equal-container">
+            <button @click="resetValue" id="reset-button">RESET</button>
+            <button @click="equalValue" id="equal-button">=</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Pia Angeliue Dee</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
